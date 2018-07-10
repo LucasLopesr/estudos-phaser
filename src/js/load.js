@@ -25,11 +25,15 @@ var loadState = {
         // carregando sprites
         game.load.spritesheet('coin','src/img/coin.png',32,32);
         game.load.spritesheet('enemy','src/img/enemy.png',24,40);
-        game.load.spritesheet('player','src/img/player.png',24,40);
+        game.load.spritesheet('player','src/img/player.png',24,32);
 
         // carregando audios
         game.load.audio('getitem','src/sfx/getitem.ogg');
         game.load.audio('loseitem','src/sfx/loseitem.ogg');
+    
+        // physics
+        game.physics.startSystem(Phaser.Physics.ARCADE);
+    
     },
 
     create: () => {
